@@ -71,7 +71,7 @@
 * Библиотека JSON for Modern C++ (например, nlohmann/json)
 
 ### Установка Gurobi
-1. [Скачайте Gurobi](https://www.gurobi.com/downloads/gurobi-optimizer/).
+1. [Скачайте Gurobi](https://www.gurobi.com/downloads/).
 2. Следуйте инструкциям по установке для вашей операционной системы.
 3. Убедитесь, что переменные среды настроены правильно (например, `GRB_LICENSE_FILE`).
 
