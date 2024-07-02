@@ -1,0 +1,46 @@
+{
+    "courses": [
+        {
+            "courseName": "Math",
+            "preferredTimeSlots": [
+                {
+                    "day": "Monday",
+                    "endTime": "11:00",
+                    "startTime": "09:00"
+                }
+            ]
+        }
+    ],
+    "instructors": [
+        {
+            "availability": [
+                {
+                    "day": "Monday",
+                    "endTime": "11:00",
+                    "startTime": "09:00"
+                },
+                {
+                    "day": "Tuesday",
+                    "endTime": "12:00",
+                    "startTime": "10:00"
+                }
+            ],
+            "name": "Aramyan",
+            "preferredCourses": [
+                "Math"
+            ]
+        }
+    ],
+    "timeSlots": [
+        {
+            "day": "Monday",
+            "endTime": "11:00",
+            "startTime": "09:00"
+        },
+        {
+            "day": "Tuesday",
+            "endTime": "12:00",
+            "startTime": "10:00"
+        }
+    ]
+}
