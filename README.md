@@ -83,29 +83,31 @@
 
 ### Пример использования
 ```cpp
+#include "./University.h"
+#include <vector>
+
+using namespace std;
+
 int main() {
-    University& uni = University::getInstance();
 
-    // Добавление временных слотов
-    uni.addTimeSlot(TimeSlot("Monday", "09:00", "10:30"));
-    uni.addTimeSlot(TimeSlot("Monday", "10:45", "12:15"));
-    // ...
+    University& university = University::getInstance();
 
-    // Добавление курсов
-    Course course1("Mathematics", { /* preferred time slots */ });
-    uni.addCourse(course1);
-    // ...
+    TimeSlot slot1("Monday", "09:00", "11:00");
+    TimeSlot slot2("Tuesday", "10:00", "12:00");
 
-    // Добавление преподавателей
-    Instructor instructor1("Dr. Smith", { /* availability */ }, { /* preferred courses */ });
-    uni.addInstructor(instructor1);
-    // ...
+    university.addTimeSlot(slot1);
+    university.addTimeSlot(slot2);
 
-    // Составление расписания
-    uni.schedule();
+    vector<TimeSlot> preferredSlots1 = { slot1 };
+    Course course1("Math", preferredSlots1);
+    university.addCourse(course1);
 
-    // Сохранение расписания
-    uni.saveState("university_schedule.json");
+    vector<TimeSlot> availability1 = { slot1, slot2 };
+    vector<Course> preferredCourses1 = { course1 };
+    Instructor instructor1("Aramyan", availability1, preferredCourses1);
+    university.addInstructor(instructor1);
+    university.schedule();
+    university.saveState("Schedule.json");
 
     return 0;
 }
